@@ -9,7 +9,7 @@ string package-full-name: fastn-community.github.io/website
 optional string license-url: https://github.com/fastn-community/website/blob/home/LICENSE
 string github: https://github.com/fastn-community/website/
 module category: fastn-community.github.io/website
-ftd.image-src image: $assets.files.images.image.svg
+;; ftd.image-src image: $assets.files.images.image.svg
 optional string preview-url:
 optional string created-by:
 optional string creator-url:
