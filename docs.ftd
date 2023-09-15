@@ -1,0 +1,175 @@
+-- import: fastn-community.github.io/website
+
+-- import: cdc
+
+
+-- component home:
+string package-name: website
+string package-full-name: fastn-community.github.io/website
+optional string license-url: https://github.com/fastn-community/website/blob/home/LICENSE
+string github: https://github.com/fastn-community/website/
+module category: fastn-community.github.io/website
+ftd.image-src image: $assets.files.images.image.svg
+optional string preview-url:
+optional string created-by:
+optional string creator-url:
+optional body description:
+ftd.type-data types: $inherited.types
+
+-- cdc.page:
+
+-- cdc.hero-section: $home.package-name
+creator-name: $home.created-by
+creator-url: $home.creator-url
+cta-primary-text: View more hero designs
+cta-primary-link: https://fastn.com/featured/
+cta-secondary-text: Preview
+cta-secondary-link: $home.preview-url
+github-url: $home.github
+license-url: $home.license-url
+
+-- end: cdc.page
+
+-- end: home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component preview:
+module category: fastn-community.github.io/website
+ftd.image-src image: $assets.files.images.image.svg
+
+
+-- cdc.page:
+
+-- preview.category.stack: Title copy goes here
+cta-primary-text: View more
+cta-primary-url: /
+cta-secondary-text: Preview
+cta-secondary-url: /
+image: $preview.image
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.
+Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat.
+
+
+
+-- preview.category.heading-center: Title copy goes here
+cta-primary-text: View more
+cta-primary-url: /
+cta-secondary-text: Preview
+cta-secondary-url: /
+image: $preview.image
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.
+Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat.
+
+
+
+-- preview.category.heading-left: Title copy goes here
+cta-primary-text: View more
+cta-primary-url: /
+cta-secondary-text: Preview
+cta-secondary-url: /
+image: $preview.image
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.
+Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat.
+
+
+
+-- preview.category.heading-right: Title copy goes here
+cta-primary-text: View more
+cta-primary-url: /
+cta-secondary-text: Preview
+cta-secondary-url: /
+image: $preview.image
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.
+Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat.
+
+
+
+-- preview.category.without-image: Title copy goes here
+cta-primary-text: View more
+cta-primary-url: /
+cta-secondary-text: Preview
+cta-secondary-url: /
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.
+Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat.
+
+
+-- end: cdc.page
+
+
+-- end: preview
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- string sample-code(a,cname):
+string a:
+string cname:
+
+"\;; In FASTN.ftd \\n"
++ "-- fastn.dependency:" + a + "\\n\\n"
++ "\;; In the file where you want to add the header (e.g., `index.ftd`)\\n\\n"
++ "\;; Add this at the top of the file\\n"
++ "-- import: " + a + " as hero\\n\\n"
++ "\;; Add this where you want to show the component\\n"
++ "-- hero." + cname +": Title copy goes here\\n"
++ "cta-primary-text: View more\\n"
++ "cta-primary-url: /\\n"
++ "cta-secondary-text: Preview\\n"
++ "cta-secondary-url: /\\n"
++ "image: $assets.files.image.svg\\n\\n"
++ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum. Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat."
+
+
+
+-- string sample-code-without-image(a,cname):
+string a:
+string cname:
+
+"\;; In FASTN.ftd \\n"
++ "-- fastn.dependency:" + a + "\\n\\n"
++ "\;; In the file where you want to add the header (e.g., `index.ftd`)\\n\\n"
++ "\;; Add this at the top of the file\\n"
++ "-- import: " + a + " as hero\\n\\n"
++ "\;; Add this where you want to show the component\\n"
++ "-- hero." + cname +": Title copy goes here\\n"
++ "cta-primary-text: View more\\n"
++ "cta-primary-url: /\\n"
++ "cta-secondary-text: Preview\\n"
++ "cta-secondary-url: /\\n"
++ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum. Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat."
