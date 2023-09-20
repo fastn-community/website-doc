@@ -1,8 +1,5 @@
 -- import: fastn-community.github.io/website-doc/docs
 
--- import: fastn-community.github.io/website-doc/preview/landing
-export: landing-preview
-
 -- import: fastn-community.github.io/website-doc/lib
 export: page
 
