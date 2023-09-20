@@ -2,6 +2,9 @@
 
 -- import: cdc
 
+-- import: fastn-community.github.io/website-doc/preview/landing
+export: landing-preview
+
 
 -- component home:
 string package-name: website
