@@ -1,4 +1,11 @@
--- import: fastn-community.github.io/website/docs
+-- import: fastn-community.github.io/website-doc/docs
+
+-- import: fastn-community.github.io/hero-doc
+export: hero-stack, hero-left-stack, hero-heading-center, hero-heading-left, hero-heading-right, hero-without-image
+
+-- import: fastn-community.github.io/website-doc/lib
+export: page
+
 
 -- docs.home:
 created-by: Priyanka

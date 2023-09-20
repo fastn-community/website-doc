@@ -1,0 +1,48 @@
+-- import: fastn-community.github.io/branchless-sitemap-header
+
+
+
+-- component page:
+optional caption site-name:
+module c-header: fastn-community.github.io/branchless-sitemap-header
+optional caption site-name:
+optional ftd.image-src site-logo:
+optional string site-url:
+children uis:
+optional string document-title:
+optional string document-description:
+optional ftd.raw-image-src document-image:
+optional string document-description:
+ftd.type-data types: $inherited.types
+ftd.color-scheme colors: $inherited.colors
+
+-- ftd.document:
+title: $page.document-title
+og-title: $page.document-title
+description: $page.document-description
+description if { page.document-description == NULL }: $page.document-title
+og-image: $page.document-image
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+background.solid: $inherited.colors.background.base
+
+-- page.c-header.header:
+site-name: $page.site-name
+site-logo: $page.site-logo
+site-url: $page.site-url
+
+-- ftd.column:
+spacing.fixed.em: 2
+width: fill-container
+children: $page.uis
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.document
+
+
+-- end: page

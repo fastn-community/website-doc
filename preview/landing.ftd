@@ -1,0 +1,51 @@
+-- import: fastn-community.github.io/website-doc
+/-- import: fastn-community.github.io/branchless-sitemap-header
+
+-- landing-preview:
+
+
+
+-- component landing-preview:
+module category: fastn-community.github.io/website-doc
+
+-- landing-preview.category.page:
+
+-- landing-preview.category.hero-stack: We transform ideas into digital outcomes.
+cta-primary-text: Learn More
+cta-primary-url: #about
+image: $assets.files.assets.landing.png
+
+We are an award-winning strategic design company that provides consultancy
+services and help you create outstanding digital products.
+
+-- landing-preview.category.hero-without-image: Built for the next generation of small business
+
+Fastn is an all-in-one payments platform where businesses can connect, transact,
+and grow together.
+
+-- landing-preview.category.hero-heading-right: Create
+image: $assets.files.assets.left-img1.jpg
+
+Welcome Studio gives you all the tools you need to create and host virtual
+experiences that look awesome and put your brand centerstage.
+
+-- landing-preview.category.hero-heading-left: Engage
+image: $assets.files.assets.right-img.jpg
+
+Welcome Studio gives you all the tools you need to create and host virtual
+experiences that look awesome and put your brand centerstage.
+
+-- landing-preview.category.hero-heading-center: Analyze
+image: $assets.files.assets.left-img2.jpg
+
+Welcome Studio gives you all the tools you need to create and host virtual
+experiences that look awesome and put your brand centerstage.
+
+-- landing-preview.category.hero-left-stack: Experiences
+image: $assets.files.assets.landing.png
+
+Lorem ipsum dolor sit amet
+
+-- end: landing-preview.category.page
+
+-- end: landing-preview
