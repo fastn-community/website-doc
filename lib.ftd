@@ -1,4 +1,5 @@
 -- import: fastn-community.github.io/branchless-sitemap-header
+-- import: fastn-community.github.io/category-doc-components/categories/color-scheme as cs
 
 
 
@@ -14,7 +15,7 @@ optional string document-description:
 optional ftd.raw-image-src document-image:
 optional string document-description:
 ftd.type-data types: $inherited.types
-ftd.color-scheme colors: $inherited.colors
+ftd.color-scheme colors: $cs.main
 
 -- ftd.document:
 title: $page.document-title
@@ -22,6 +23,8 @@ og-title: $page.document-title
 description: $page.document-description
 description if { page.document-description == NULL }: $page.document-title
 og-image: $page.document-image
+colors: $page.colors
+types: $page.types
 
 -- ftd.column:
 width: fill-container

@@ -1,12 +1,14 @@
 -- import: fastn-community.github.io/website-doc
-/-- import: fastn-community.github.io/branchless-sitemap-header
+-- import: fifthtry.github.io/dark-mode-switcher as dms
 
 -- landing-preview:
 
 
 
+
 -- component landing-preview:
 module category: fastn-community.github.io/website-doc
+boolean dark-mode-switcher: true
 
 -- landing-preview.category.page:
 
@@ -45,6 +47,9 @@ experiences that look awesome and put your brand centerstage.
 image: $assets.files.assets.landing.png
 
 Lorem ipsum dolor sit amet
+
+-- dms.dark-mode-switcher-float:
+if: { landing-preview.dark-mode-switcher }
 
 -- end: landing-preview.category.page
 

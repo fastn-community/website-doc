@@ -6,6 +6,13 @@ favicon: /-/fastn-community.github.io/website-doc/favicon.ico
 -- fastn.dependency: fastn-community.github.io/category-doc-components as cdc
 -- fastn.dependency: fastn-community.github.io/branchless-sitemap-header
 -- fastn.dependency: fastn-community.github.io/hero-doc
+-- fastn.dependency: fifthtry.github.io/dark-mode-switcher
 
 -- fastn.auto-import: fastn-community.github.io/website-doc/assets
 -- fastn.auto-import: fastn-community.github.io/website-doc/lib
+
+
+
+-- fastn.sitemap:
+
+# Home: /preview/landing/

@@ -1,11 +1,19 @@
 -- import: fastn-community.github.io/website-doc/docs
 
--- import: fastn-community.github.io/hero-doc
-export: hero-stack, hero-left-stack, hero-heading-center, hero-heading-left, hero-heading-right, hero-without-image
+-- import: fastn-community.github.io/website-doc/preview/landing
+export: landing-preview
 
 -- import: fastn-community.github.io/website-doc/lib
 export: page
 
 
+-- import: fastn-community.github.io/hero-doc
+export: hero-stack, hero-left-stack, hero-heading-center, hero-heading-left, hero-heading-right, hero-without-image
+
+
+
+
+
 -- docs.home:
 created-by: Priyanka
+preview-url: /preview/landing/
