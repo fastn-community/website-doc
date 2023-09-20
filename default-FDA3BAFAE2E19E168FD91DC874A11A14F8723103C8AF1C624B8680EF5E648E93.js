@@ -472,6 +472,10 @@ class RecordInstance {
         }
         this.#closures.forEach((closure) => closure.update());
     }
+    setAndReturn(key, value) {
+        this.set(key, value);
+        return this;
+    }
     replace(obj) {
         for (let key in this.#fields) {
             if (!(key in obj.#fields)) {
@@ -2678,6 +2682,28 @@ let fastn_utils = {
            return obj;
         }
     },
+    getInheritedValues(default_args, inherited, function_args) {
+        let record_fields = {
+            "colors": ftd.default_colors.getClone().setAndReturn("is-root", true),
+            "types": ftd.default_types.getClone().setAndReturn("is-root", true)
+        }
+        Object.assign(record_fields, default_args);
+        let fields = {};
+        if (inherited instanceof fastn.recordInstanceClass) {
+            fields = inherited.getAllFields();
+            if (fields["colors"].get("is-root")) {
+               delete fields.colors;
+            }
+            if (fields["types"].get("is-root")) {
+               delete fields.types;
+            }
+        }
+        Object.assign(record_fields, fields);
+        Object.assign(record_fields, function_args);
+        return fastn.recordInstance({
+              ...record_fields
+        });
+    },
     removeNonFastnClasses(node) {
         let classList = node.getNode().classList;
         let extraCodeData = node.getExtraData().code;
@@ -3935,7 +3961,7 @@ window.ftd = ftd;
 
 ftd.toggle = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(!fastn_utils.getter(__args__.a));
@@ -3951,7 +3977,7 @@ ftd.toggle = function (args) {
 }
 ftd.increment = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(fastn_utils.getter(__args__.a) + 1);
@@ -3967,7 +3993,7 @@ ftd.increment = function (args) {
 }
 ftd.increment_by = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(fastn_utils.getter(__args__.a) + fastn_utils.getter(__args__.v));
@@ -3983,7 +4009,7 @@ ftd.increment_by = function (args) {
 }
 ftd.enable_light_mode = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     return (enable_light_mode());
@@ -3993,7 +4019,7 @@ ftd.enable_light_mode = function (args) {
 }
 ftd.enable_dark_mode = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     return (enable_dark_mode());
@@ -4003,7 +4029,7 @@ ftd.enable_dark_mode = function (args) {
 }
 ftd.enable_system_mode = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     return (enable_system_mode());
@@ -4013,7 +4039,7 @@ ftd.enable_system_mode = function (args) {
 }
 ftd.set_bool = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(__args__.v);
@@ -4029,7 +4055,7 @@ ftd.set_bool = function (args) {
 }
 ftd.set_boolean = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(__args__.v);
@@ -4045,7 +4071,7 @@ ftd.set_boolean = function (args) {
 }
 ftd.set_string = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(__args__.v);
@@ -4061,7 +4087,7 @@ ftd.set_string = function (args) {
 }
 ftd.set_integer = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "fastn_community_github_io_website";
+  __fastn_package_name__ = "fastn_community_github_io_website_doc";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(__args__.v);
@@ -4642,6 +4668,6 @@ ftd.breakpoint_width = fastn.recordInstance({
 });
 ftd.device = fastn.mutable(fastn_dom.DeviceData.Desktop);
 let inherited = fastn.recordInstance({
-  colors: ftd.default_colors,
-  types: ftd.default_types
+  colors: ftd.default_colors.getClone().setAndReturn("is_root", true),
+  types: ftd.default_types.getClone().setAndReturn("is_root", true)
 });

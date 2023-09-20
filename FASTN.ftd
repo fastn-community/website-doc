@@ -1,8 +1,11 @@
 -- import: fastn
 
--- fastn.package: fastn-community.github.io/website
-favicon: /-/fastn-community.github.io/website/favicon.ico
+-- fastn.package: fastn-community.github.io/website-doc
+favicon: /-/fastn-community.github.io/website-doc/favicon.ico
 
 -- fastn.dependency: fastn-community.github.io/category-doc-components as cdc
+-- fastn.dependency: fastn-community.github.io/branchless-sitemap-header
+-- fastn.dependency: fastn-community.github.io/hero-doc
 
--- fastn.auto-import: fastn-community.github.io/website/assets
+-- fastn.auto-import: fastn-community.github.io/website-doc/assets
+-- fastn.auto-import: fastn-community.github.io/website-doc/lib

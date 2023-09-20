@@ -1,20 +1,22 @@
--- import: fastn-community.github.io/website
+-- import: fastn-community.github.io/website-doc
 
 -- import: cdc
 
 
 -- component home:
 string package-name: website
-string package-full-name: fastn-community.github.io/website
-optional string license-url: https://github.com/fastn-community/website/blob/home/LICENSE
-string github: https://github.com/fastn-community/website/
-module category: fastn-community.github.io/website
+string package-full-name: fastn-community.github.io/website-doc
+optional string license-url: https://github.com/fastn-community/website-doc/blob/home/LICENSE
+string github: https://github.com/fastn-community/website-doc/
+module category: fastn-community.github.io/website-doc
 ;; ftd.image-src image: $assets.files.images.image.svg
 optional string preview-url:
 optional string created-by:
 optional string creator-url:
 optional body description:
+ftd.image-src list images:
 ftd.type-data types: $inherited.types
+
 
 -- cdc.page:
 
@@ -27,6 +29,20 @@ cta-secondary-text: Preview
 cta-secondary-link: $home.preview-url
 github-url: $home.github
 license-url: $home.license-url
+
+-- cdc.slider:
+if: { !ftd.is_empty(home.images) }
+
+-- ftd.image:
+src: $obj
+for: obj in $home.images
+
+-- end: cdc.slider
+
+
+-- home.category.hero-without-image: Hello
+
+World
 
 -- end: cdc.page
 
