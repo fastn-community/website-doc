@@ -40,6 +40,8 @@ site-url: $page.site-url
 spacing.fixed.em: 2
 width: fill-container
 children: $page.uis
+max-width.fixed.px: 1280
+align-self: center
 
 -- end: ftd.column
 

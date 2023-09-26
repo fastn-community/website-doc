@@ -1,4 +1,5 @@
 -- import: fastn-community.github.io/website-doc/docs
+-- import: fastn-community.github.io/website-doc/preview/data
 
 -- import: fastn-community.github.io/website-doc/lib
 export: page
@@ -7,10 +8,22 @@ export: page
 -- import: fastn-community.github.io/hero-doc
 export: hero-stack, hero-left-stack, hero-heading-center, hero-heading-left, hero-heading-right, hero-without-image
 
+-- import: fastn-community.github.io/testimonial-doc
+export: testimonials
 
+-- import: fastn-community.github.io/features-doc
+export: features
+
+-- import: fastn-community.github.io/faqs-doc
+export: faqs
+
+-- import: fastn-community.github.io/logo-doc
+export: quote-divider
 
 
 
 -- docs.home:
 created-by: Priyanka
 preview-url: /preview/landing/
+images: $data.images
+

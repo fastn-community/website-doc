@@ -6,6 +6,10 @@ favicon: /-/fastn-community.github.io/website-doc/favicon.ico
 -- fastn.dependency: fastn-community.github.io/category-doc-components as cdc
 -- fastn.dependency: fastn-community.github.io/branchless-sitemap-header
 -- fastn.dependency: fastn-community.github.io/hero-doc
+-- fastn.dependency: fastn-community.github.io/testimonial-doc
+-- fastn.dependency: fastn-community.github.io/features-doc
+-- fastn.dependency: fastn-community.github.io/faqs-doc
+-- fastn.dependency: fastn-community.github.io/logo-doc
 -- fastn.dependency: fifthtry.github.io/dark-mode-switcher
 
 -- fastn.auto-import: fastn-community.github.io/website-doc/assets
@@ -16,3 +20,5 @@ favicon: /-/fastn-community.github.io/website-doc/favicon.ico
 -- fastn.sitemap:
 
 # Home: /preview/landing/
+
+# Services: /preview/services/

@@ -1,0 +1,29 @@
+-- import: fastn-community.github.io/website-doc
+-- import: fifthtry.github.io/dark-mode-switcher as dms
+
+
+
+
+
+-- services-preview:
+
+-- component services-preview:
+module category: fastn-community.github.io/website-doc
+boolean dark-mode-switcher: true
+
+-- services-preview.category.page:
+
+-- services-preview.category.hero-heading-left: We transform ideas into digital outcomes.
+cta-primary-text: Learn More
+cta-primary-url: #about
+image: $assets.files.assets.landing.png
+
+We are an award-winning strategic design company that provides consultancy
+services and help you create outstanding digital products.
+
+-- dms.dark-mode-switcher-float:
+if: { services-preview.dark-mode-switcher }
+
+-- end: services-preview.category.page
+
+-- end: services-preview

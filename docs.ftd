@@ -39,13 +39,16 @@ if: { !ftd.is_empty(home.images) }
 -- ftd.image:
 src: $obj
 for: obj in $home.images
+width: fill-container
+height: fill-container
 
 -- end: cdc.slider
 
+-- cdc.code:
 
--- home.category.hero-without-image: Hello
+$sample-code(a = $home.package-full-name)
 
-World
+-- end: cdc.code
 
 -- end: cdc.page
 
@@ -156,39 +159,11 @@ Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum er
 
 
 
--- string sample-code(a,cname):
+-- string sample-code(a):
 string a:
-string cname:
+
 
 "\;; In FASTN.ftd \\n"
-+ "-- fastn.dependency:" + a + "\\n\\n"
-+ "\;; In the file where you want to add the header (e.g., `index.ftd`)\\n\\n"
-+ "\;; Add this at the top of the file\\n"
-+ "-- import: " + a + " as hero\\n\\n"
-+ "\;; Add this where you want to show the component\\n"
-+ "-- hero." + cname +": Title copy goes here\\n"
-+ "cta-primary-text: View more\\n"
-+ "cta-primary-url: /\\n"
-+ "cta-secondary-text: Preview\\n"
-+ "cta-secondary-url: /\\n"
-+ "image: $assets.files.image.svg\\n\\n"
-+ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum. Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat."
++ "-- fastn.dependency:" + a 
 
 
-
--- string sample-code-without-image(a,cname):
-string a:
-string cname:
-
-"\;; In FASTN.ftd \\n"
-+ "-- fastn.dependency:" + a + "\\n\\n"
-+ "\;; In the file where you want to add the header (e.g., `index.ftd`)\\n\\n"
-+ "\;; Add this at the top of the file\\n"
-+ "-- import: " + a + " as hero\\n\\n"
-+ "\;; Add this where you want to show the component\\n"
-+ "-- hero." + cname +": Title copy goes here\\n"
-+ "cta-primary-text: View more\\n"
-+ "cta-primary-url: /\\n"
-+ "cta-secondary-text: Preview\\n"
-+ "cta-secondary-url: /\\n"
-+ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum. Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat."

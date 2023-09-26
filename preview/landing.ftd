@@ -1,5 +1,9 @@
 -- import: fastn-community.github.io/website-doc
 -- import: fifthtry.github.io/dark-mode-switcher as dms
+-- import: fastn-community.github.io/website-doc/preview/data
+
+
+
 
 -- landing-preview:
 
@@ -47,6 +51,30 @@ experiences that look awesome and put your brand centerstage.
 image: $assets.files.assets.landing.png
 
 Lorem ipsum dolor sit amet
+
+-- landing-preview.category.testimonials: Title copy goes here
+testimonial-list: $data.list-of-testimonials
+
+sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.
+Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat.
+
+-- landing-preview.category.features: Title copy goes here
+feature-list: $data.list-of-features
+
+sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.
+Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat.
+
+-- landing-preview.category.faqs: Title copy goes here
+faq-list: $data.list-of-faqs
+
+sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.
+Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat.
+
+-- landing-preview.category.quote-divider: Title copy goes here
+logo-list: $data.list-of-logos
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 
 -- dms.dark-mode-switcher-float:
 if: { landing-preview.dark-mode-switcher }
